@@ -7,5 +7,6 @@ what i have done:
 - when an user registers a welcome email gets sent to their registered address
 
 what im missing:
+- flash messages not working right now so i cant display success and specific error messages
 - endpoint documentation + tests
 - more validations & query filters   
