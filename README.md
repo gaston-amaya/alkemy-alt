@@ -1,24 +1,11 @@
 # README
+what i have done:
+- added all tables and associations, displaying the info as requested
+- added CRUD for all controllers
+- added login and register so that only registered & logged in users can access the info in the controllers
+- added basic validations like -unique name and checking empty fields
+- when an user registers a welcome email gets sent to their registered address
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+what im missing:
+- endpoint documentation + tests
+- more validations & query filters   
