@@ -1,4 +1,4 @@
-# README
+# alkemy alternative challange
 what i have done:
 - added all tables and associations, displaying the info as requested
 - added CRUD for all controllers
