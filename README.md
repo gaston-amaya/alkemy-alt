@@ -13,7 +13,7 @@ what im missing:
 
 
 
-- Content of this project:
+Content of this project:
 
 - Login & Register with devise-jwt gem
 
