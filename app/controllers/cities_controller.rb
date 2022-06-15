@@ -19,10 +19,13 @@ class CitiesController < ApplicationController
     end
 
     def create
-        @city = City.create(city_params)
+        @city = City.create!(city_params)
         if @city.valid?
             @city.save
+            flash[:notice] = 'The City has been added successfully!'
         redirect_to = cities_path
+    else
+        flash[:alert] = @city.errors.full_messages
         end
 
     end 
@@ -34,17 +37,21 @@ class CitiesController < ApplicationController
     end
 
     def update
+        @city.update!(city_params)
+        if @city.valid?
+            @city.save
+            flash[:notice] = 'The City has been updated successfully!'
+        redirect_to = cities_path
+    else
+        flash[:alert] = @city.errors.full_messages
+        end
 
-       
-
-        @city.update(city_params)
 
     end
 
     def destroy
-
-        
         @city.destroy
+        flash[:notice] = 'The character has been deleted successfully!'
 
     end
 

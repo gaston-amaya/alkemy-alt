@@ -3,7 +3,9 @@ class RegistrationsController < Devise::RegistrationsController
 
     def create
         build_resource(sign_up_params)
-        if resource.save
+        if resource.valid?
+            resource.save
+            flash[:notice] = 'Registered successfully!'
             RegistrationMailer.with(user: @user).new_registration_email.deliver
         render json: resource, status: :created
         

@@ -23,9 +23,16 @@ class IconsController < ApplicationController
 
     def create
 
-        icons = Icon.create(icons_params)
+        @icons = Icon.create(icons_params)
+        if @icons.valid?
+            @icons.save
+            flash[:notice] = 'The Geographic icon has been added successfully!'
+            redirect_to = icons_path
+        else
+            flash[:alert] = @icons.errors.full_messages
+        
 
-        redirect_to = icons_path
+        end
 
     end
 
@@ -37,18 +44,18 @@ class IconsController < ApplicationController
     end
 
     def update
-
-        
-
-        @icon.update(icons_params)
+    @icon.update(icons_params)
+    flash[:notice] = 'The Geographic icon has been updated successfully!'
+            redirect_to = icons_path
+        else
+            flash[:alert] = @icons.errors.full_messages
 
 
     end
 
     def destroy
-
-        
-        @icon.destroy
+    @icon.destroy
+    flash[:notice] = 'The Geographic icon has been deleted successfully!'
 
     end
 

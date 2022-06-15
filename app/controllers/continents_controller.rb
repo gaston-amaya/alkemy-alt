@@ -19,28 +19,38 @@ class ContinentsController < ApplicationController
      end
  
      def create
-         continent = Continent.create(continent_params)
+         @continent = Continent.create!(continent_params)
+         if @continent.valid?
+            @continent.save
  
-         redirect_to continents_path
- 
-     end
+            flash[:notice] = 'The Continent has been added successfully!'
+            redirect_to = continents_path
+        else
+            flash[:alert] = @continent.errors.full_messages
+            end
+     
+    end
  
      def edit
          
      end
  
      def update
-     
-         
+        @continent.update(continent_params)
+        if @continent.valid?
+            @continent.save
  
-         @continent.update(continent_params)
+            flash[:notice] = 'The Continent has been updated successfully!'
+            redirect_to = continents_path
+        else
+            flash[:alert] = @continent.errors.full_messages
+            end
      
      end
  
      def destroy
-         
-         
          @continent.destroy
+         flash[:notice] = 'The Continent has been deleted successfully!'
      
      end
  

@@ -11,12 +11,15 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2022_05_24_022843) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "cities", force: :cascade do |t|
     t.string "picture"
     t.string "denomination"
     t.float "population"
     t.float "land_size"
-    t.integer "continent_id", null: false
+    t.bigint "continent_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["continent_id"], name: "index_cities_on_continent_id"
@@ -34,7 +37,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_24_022843) do
     t.string "denomination"
     t.float "height"
     t.text "story"
-    t.integer "city_id", null: false
+    t.bigint "city_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["city_id"], name: "index_icons_on_city_id"

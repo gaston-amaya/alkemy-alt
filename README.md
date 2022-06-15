@@ -1,26 +1,24 @@
-# alkemy alternative challange
-what i have done:
-- added all tables and associations, displaying the info as requested
-- added CRUD for all controllers
-- added login and register so that only registered & logged in users can access the info in the controllers
-- added basic validations like -unique name and checking empty fields
-- when an user registers a welcome email gets sent to their registered address
+# README
 
-what im missing:
-- flash messages not working right now so i cant display success and specific error messages
-- endpoint documentation + tests
-- more validations & query filters   
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
+Things you may want to cover:
 
+* Ruby version
 
-Content of this project:
+* System dependencies
 
-- Login & Register with devise-jwt gem
+* Configuration
 
-- Welcome email after registering done with Action Mailer
+* Database creation
 
-- SQLite, has many/belongs to/many through associations
+* Database initialization
 
-- Filter what information is displayed in GET requests with Active Model Serializer gem
+* How to run the test suite
 
-- Model validations: presence, uniqueness, length, specific characters
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
