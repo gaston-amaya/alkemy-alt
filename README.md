@@ -19,6 +19,6 @@ Content of this project:
 
 - Login & Register with devise-jwt gem
 - Welcome email after registering done with Action Mailer
-- SQLite, has many/belongs to/many through associations
+- PostgreSQL, has many/belongs to/many through associations
 - Filter what information is displayed in GET requests with Active Model Serializer gem
 - Model validations: presence, uniqueness, length, specific characters
